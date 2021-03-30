@@ -1,0 +1,1 @@
+//window.onunload=function(){$.post("userServlet?method=quit");}

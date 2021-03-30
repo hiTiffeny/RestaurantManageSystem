@@ -1,0 +1,12 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+
+<ul class="list-group" id="left-nav">
+	<a href="userServlet?method=toUserIndexUI" class="list-group-item"style='text-align: center;'>个人信息</a>
+	<a href="userServlet?method=toUserPasswordEditUI" class="list-group-item"style='text-align: center;'>修改密码</a>
+	<c:if test="${user.type == 5 }">
+		<a href="userServlet?method=toUserManageUI" class="list-group-item" style='text-align: center;'>账户管理</a>
+		<a href="bookServlet?method=itemManageUI" class="list-group-item"style='text-align: center;'>菜单管理</a>
+		<a href="userServlet?method=toSalaryUI" class="list-group-item"style='text-align: center;'>员工业绩</a>
+		<a href="userServlet?method=toFinanceUI" class="list-group-item"style='text-align: center;'>运营分析</a>
+	</c:if>	
+</ul>

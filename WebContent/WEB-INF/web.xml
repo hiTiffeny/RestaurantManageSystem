@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<display-name></display-name>
+	<listener>
+		<listener-class>RCMS.listener.MyServletContextListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>RCMS.listener.MySessionListener</listener-class>
+	</listener>
+	<filter>
+		<filter-name>EncodingFilter</filter-name>
+		<filter-class>RCMS.filter.EncodingFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>RCMS.filter.LoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>EncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>MianServlet</servlet-name>
+		<servlet-class>RCMS.servlet.MianServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>BookServlet</servlet-name>
+		<servlet-class>RCMS.servlet.BookServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>UserServlet</servlet-name>
+		<servlet-class>RCMS.servlet.UserServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>UploadServlet</servlet-name>
+		<servlet-class>RCMS.servlet.UploadServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>CartServlet</servlet-name>
+		<servlet-class>RCMS.servlet.CartServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>TradeServlet</servlet-name>
+		<servlet-class>RCMS.servlet.TradeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>MessageServlet</servlet-name>
+		<servlet-class>RCMS.servlet.MessageServlet</servlet-class>
+	</servlet>
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>MianServlet</servlet-name>
+		<url-pattern>/mianServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BookServlet</servlet-name>
+		<url-pattern>/bookServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UserServlet</servlet-name>
+		<url-pattern>/userServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UploadServlet</servlet-name>
+		<url-pattern>/uploadServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CartServlet</servlet-name>
+		<url-pattern>/cartServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TradeServlet</servlet-name>
+		<url-pattern>/tradeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MessageServlet</servlet-name>
+		<url-pattern>/messageServlet</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<error-page>
+  	<error-code>404</error-code>
+  	<location>/error.jsp</location>
+	  </error-page>
+	  <error-page>
+	  	<exception-type>java.lang.Exception</exception-type>
+	  	<location>/error.jsp</location>
+	  </error-page>
+	  <filter>
+    <display-name>TranactionFilter</display-name>
+    <filter-name>TranactionFilter</filter-name>
+    <filter-class>RCMS.filter.TranactionFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>TranactionFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+</web-app>
